@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -14,7 +15,7 @@ export default function Home() {
           <div className="w-36 h-36 sm:w-44 sm:h-44 mx-auto mb-8 drop-shadow-2xl">
             <Image
               src="/logo.png"
-              alt="BloomPath Logo"
+              alt="育見未來 BloomPath"
               width={176}
               height={176}
               className="rounded-[32px]"
@@ -22,17 +23,21 @@ export default function Home() {
             />
           </div>
 
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white mb-2 tracking-tight">
-            BloomPath
+          {/* App name */}
+          <h1 className="mb-5">
+            <span className="block text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white mb-2 tracking-wide">
+              育見未來
+            </span>
+            <span className="block text-lg sm:text-xl text-white/50 font-semibold tracking-widest uppercase">
+              BloomPath
+            </span>
           </h1>
-          <p className="text-lg sm:text-xl text-white/60 mb-6">
-            育見未來
-          </p>
 
+          {/* Tagline */}
           <p className="text-lg sm:text-xl text-white/80 leading-relaxed max-w-lg mx-auto mb-3">
             用科學方法，陪孩子走每一步。
           </p>
-          <p className="text-base sm:text-lg text-white/50 max-w-lg mx-auto">
+          <p className="text-sm sm:text-base text-white/40 max-w-md mx-auto">
             基於蒙特梭利與正向教養，AI 驅動的兒童發展追蹤 App
           </p>
         </div>
@@ -96,7 +101,7 @@ export default function Home() {
       </section>
 
       {/* CTA */}
-      <section className="max-w-4xl mx-auto px-6 pb-20">
+      <section className="max-w-4xl mx-auto px-6 pb-12">
         <div className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-[#1a2744] to-[#2a3d5f] p-10 sm:p-14 text-center">
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom_right,rgba(184,169,201,0.2),transparent_60%)]" />
           <div className="relative">
@@ -113,6 +118,19 @@ export default function Home() {
               <span className="text-white/90 font-semibold text-sm">敬請期待</span>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* Legal links */}
+      <section className="max-w-4xl mx-auto px-6 pb-8">
+        <div className="flex items-center justify-center gap-6 text-sm text-text-muted">
+          <Link href="/privacy" className="hover:text-primary-dark transition-colors">
+            隱私政策
+          </Link>
+          <span className="text-border">|</span>
+          <Link href="/terms" className="hover:text-primary-dark transition-colors">
+            服務條款
+          </Link>
         </div>
       </section>
     </main>
