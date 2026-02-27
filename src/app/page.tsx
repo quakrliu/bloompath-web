@@ -26,7 +26,7 @@ export default function Home() {
             BloomPath
           </h1>
           <p className="text-lg sm:text-xl text-white/60 mb-6">
-            綻放之路
+            育見未來
           </p>
 
           <p className="text-lg sm:text-xl text-white/80 leading-relaxed max-w-lg mx-auto mb-3">
