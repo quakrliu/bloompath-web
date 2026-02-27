@@ -1,17 +1,48 @@
 import Image from "next/image";
 import Link from "next/link";
 
+function IconTrack() {
+  return (
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#B8A9C9" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+      <line x1="18" y1="20" x2="18" y2="10" /><line x1="12" y1="20" x2="12" y2="4" /><line x1="6" y1="20" x2="6" y2="14" />
+    </svg>
+  );
+}
+
+function IconMentor() {
+  return (
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#9AAEA8" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+      <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
+    </svg>
+  );
+}
+
+function IconTask() {
+  return (
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#C9AD7C" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+      <path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z" />
+      <path d="m9 12 2 2 4-4" />
+    </svg>
+  );
+}
+
+function IconReport() {
+  return (
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#8AAE8A" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+      <polyline points="22 12 18 12 15 21 9 3 6 12 2 12" />
+    </svg>
+  );
+}
+
 export default function Home() {
   return (
     <main className="min-h-screen">
       {/* Hero */}
       <section className="relative overflow-hidden">
-        {/* Background gradient */}
         <div className="absolute inset-0 bg-gradient-to-b from-[#1a2744] via-[#243352] to-cream" />
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(184,169,201,0.15),transparent_70%)]" />
 
         <div className="relative max-w-4xl mx-auto px-6 pt-16 sm:pt-24 pb-24 sm:pb-32 text-center">
-          {/* Logo */}
           <div className="w-36 h-36 sm:w-44 sm:h-44 mx-auto mb-8 drop-shadow-2xl">
             <Image
               src="/logo.png"
@@ -23,7 +54,6 @@ export default function Home() {
             />
           </div>
 
-          {/* App name */}
           <h1 className="mb-5">
             <span className="block text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white mb-2 tracking-wide">
               育見未來
@@ -33,7 +63,6 @@ export default function Home() {
             </span>
           </h1>
 
-          {/* Tagline */}
           <p className="text-lg sm:text-xl text-white/80 leading-relaxed max-w-lg mx-auto mb-3">
             用科學方法，陪孩子走每一步。
           </p>
@@ -52,8 +81,8 @@ export default function Home() {
               className="group bg-white rounded-2xl p-6 shadow-sm border border-border/50 hover:shadow-md hover:-translate-y-0.5 transition-all duration-300"
             >
               <div
-                className="w-11 h-11 rounded-xl flex items-center justify-center mb-4 text-xl"
-                style={{ background: f.color }}
+                className="w-11 h-11 rounded-xl flex items-center justify-center mb-4"
+                style={{ background: f.bg }}
               >
                 {f.icon}
               </div>
@@ -71,7 +100,7 @@ export default function Home() {
         <div className="grid grid-cols-3 gap-4">
           {stats.map((s) => (
             <div key={s.label} className="text-center py-6">
-              <div className="text-3xl sm:text-4xl font-extrabold text-primary-dark mb-1">
+              <div className="text-3xl sm:text-4xl font-extrabold text-text mb-1">
                 {s.value}
               </div>
               <div className="text-xs sm:text-sm text-text-muted">{s.label}</div>
@@ -88,7 +117,7 @@ export default function Home() {
         <div className="grid sm:grid-cols-3 gap-6">
           {steps.map((step, i) => (
             <div key={step.title} className="text-center">
-              <div className="w-10 h-10 rounded-full bg-primary/15 text-primary-dark font-extrabold text-lg flex items-center justify-center mx-auto mb-4">
+              <div className="w-10 h-10 rounded-full bg-primary/15 text-text-secondary font-bold text-base flex items-center justify-center mx-auto mb-4">
                 {i + 1}
               </div>
               <h3 className="font-bold text-text mb-2">{step.title}</h3>
@@ -139,26 +168,26 @@ export default function Home() {
 
 const features = [
   {
-    icon: "📊",
-    color: "rgba(184,169,201,0.15)",
+    icon: <IconTrack />,
+    bg: "rgba(184,169,201,0.12)",
     title: "發展追蹤",
     desc: "224 項技能，涵蓋 0-18 歲的八大發展領域，系統化追蹤孩子的成長里程碑。",
   },
   {
-    icon: "🧠",
-    color: "rgba(154,174,168,0.15)",
+    icon: <IconMentor />,
+    bg: "rgba(154,174,168,0.12)",
     title: "AI 育兒導師",
     desc: "隨時提問教養難題，獲得基於蒙特梭利方法的個人化建議與指導。",
   },
   {
-    icon: "✅",
-    color: "rgba(201,173,124,0.15)",
+    icon: <IconTask />,
+    bg: "rgba(201,173,124,0.12)",
     title: "每日任務",
     desc: "每天 3 個適齡活動建議，輕鬆融入日常生活，培養孩子的獨立性與能力。",
   },
   {
-    icon: "📈",
-    color: "rgba(138,174,138,0.15)",
+    icon: <IconReport />,
+    bg: "rgba(138,174,138,0.12)",
     title: "成長週報",
     desc: "每週自動生成成長報告，掌握孩子的進步趨勢與下一步發展重點。",
   },
