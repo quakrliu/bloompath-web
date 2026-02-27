@@ -16,3 +16,8 @@ body {
   background: var(--color-cream);
   color: var(--color-text);
 }
+
+/* Smooth scroll */
+html {
+  scroll-behavior: smooth;
+}

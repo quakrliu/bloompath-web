@@ -24,14 +24,14 @@ export default function RootLayout({
       <body className={`${nunito.variable} font-sans antialiased`}>
         {children}
         <footer className="border-t border-border py-8 text-center text-sm text-text-muted">
-          <div className="max-w-3xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-center gap-4">
-            <span>&copy; {new Date().getFullYear()} Quakr. All rights reserved.</span>
-            <span className="hidden sm:inline">·</span>
-            <a href="/privacy" className="hover:text-primary transition-colors">
+          <div className="max-w-4xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-6">
+            <span>&copy; {new Date().getFullYear()} Quakr</span>
+            <span className="hidden sm:inline text-border">|</span>
+            <a href="/privacy" className="hover:text-primary-dark transition-colors">
               Privacy Policy
             </a>
-            <span className="hidden sm:inline">·</span>
-            <a href="/terms" className="hover:text-primary transition-colors">
+            <span className="hidden sm:inline text-border">|</span>
+            <a href="/terms" className="hover:text-primary-dark transition-colors">
               Terms of Service
             </a>
           </div>
