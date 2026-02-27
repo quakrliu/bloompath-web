@@ -22,9 +22,12 @@ export default function Home() {
             />
           </div>
 
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white mb-5 tracking-tight">
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white mb-2 tracking-tight">
             BloomPath
           </h1>
+          <p className="text-lg sm:text-xl text-white/60 mb-6">
+            綻放之路
+          </p>
 
           <p className="text-lg sm:text-xl text-white/80 leading-relaxed max-w-lg mx-auto mb-3">
             用科學方法，陪孩子走每一步。
