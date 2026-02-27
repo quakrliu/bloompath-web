@@ -1,65 +1,71 @@
-import Image from "next/image";
-
 export default function Home() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
+    <main className="min-h-screen">
+      {/* Hero */}
+      <section className="max-w-3xl mx-auto px-6 pt-20 pb-16 text-center">
+        <div className="w-20 h-20 rounded-3xl bg-primary/15 flex items-center justify-center mx-auto mb-6">
+          <span className="text-4xl">🌱</span>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+        <h1 className="text-4xl sm:text-5xl font-extrabold text-text mb-4 tracking-tight">
+          BloomPath
+        </h1>
+        <p className="text-lg text-text-secondary leading-relaxed max-w-xl mx-auto">
+          用科學方法，陪孩子走每一步。<br />
+          基於蒙特梭利與正向教養，AI 驅動的兒童發展追蹤 App。
+        </p>
+        <p className="text-base text-text-muted mt-2">
+          Science-based parenting, one step at a time.
+        </p>
+      </section>
+
+      {/* Features */}
+      <section className="max-w-3xl mx-auto px-6 pb-20">
+        <div className="grid sm:grid-cols-2 gap-6">
+          {features.map((f) => (
+            <div
+              key={f.title}
+              className="bg-white rounded-[20px] p-6 shadow-sm"
+            >
+              <span className="text-2xl mb-3 block">{f.icon}</span>
+              <h3 className="text-lg font-bold text-text mb-1">{f.title}</h3>
+              <p className="text-sm text-text-secondary leading-relaxed">
+                {f.desc}
+              </p>
+            </div>
+          ))}
         </div>
-      </main>
-    </div>
+      </section>
+
+      {/* CTA */}
+      <section className="max-w-3xl mx-auto px-6 pb-20 text-center">
+        <div className="bg-white rounded-[20px] p-8 shadow-sm">
+          <h2 className="text-2xl font-bold text-text mb-2">即將上架 App Store</h2>
+          <p className="text-text-secondary">Coming soon to the App Store</p>
+        </div>
+      </section>
+    </main>
   );
 }
+
+const features = [
+  {
+    icon: "📊",
+    title: "發展追蹤",
+    desc: "224 項技能，涵蓋 0-18 歲的八大發展領域，系統化追蹤孩子的成長。",
+  },
+  {
+    icon: "🤖",
+    title: "AI 育兒導師",
+    desc: "隨時提問教養難題，獲得基於蒙特梭利方法的個人化建議。",
+  },
+  {
+    icon: "📋",
+    title: "每日任務",
+    desc: "每天 3 個適齡活動建議，輕鬆融入日常生活，培養孩子的獨立性。",
+  },
+  {
+    icon: "📈",
+    title: "成長週報",
+    desc: "每週自動生成成長報告，掌握孩子的進步趨勢與發展重點。",
+  },
+];
