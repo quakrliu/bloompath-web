@@ -1,7 +1,6 @@
 "use client";
 
 import Image from "next/image";
-import Link from "next/link";
 import { useTranslation } from "@/components/LanguageProvider";
 
 /* ── SVG Icons (Morandi palette) ── */
@@ -265,18 +264,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Legal links */}
-      <section className="max-w-4xl mx-auto px-6 pb-8">
-        <div className="flex items-center justify-center gap-6 text-sm text-text-muted">
-          <Link href="/privacy" className="hover:text-primary-dark transition-colors">
-            {t.common.privacyPolicy}
-          </Link>
-          <span className="text-border">|</span>
-          <Link href="/terms" className="hover:text-primary-dark transition-colors">
-            {t.common.termsOfService}
-          </Link>
-        </div>
-      </section>
+
     </main>
   );
 }
