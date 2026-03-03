@@ -8,7 +8,7 @@ export default function TermsOfService() {
   return (
     <main className="max-w-3xl mx-auto px-6 py-16">
       <h1 className="text-3xl font-extrabold text-text mb-2">Terms of Service</h1>
-      <p className="text-sm text-text-muted mb-8">Last updated: February 28, 2026</p>
+      <p className="text-sm text-text-muted mb-8">Last updated: March 3, 2026</p>
 
       <div className="prose">
         <Section title="1. Acceptance of Terms">
@@ -42,54 +42,66 @@ export default function TermsOfService() {
           />
         </Section>
 
-        <Section title="5. Free Tier Limitations">
+        <Section title="5. Refund Policy">
+          <BulletList
+            items={[
+              "All purchases are processed through the Apple App Store. BloomPath does not directly collect or handle payment information.",
+              "To request a refund, please contact Apple Support (https://support.apple.com/HT204084) or use the \"Report a Problem\" page in your purchase history.",
+              "Refund eligibility is determined by Apple in accordance with their refund policies.",
+              "No refunds will be issued for partially used subscription periods.",
+              "BloomPath cannot process refunds on behalf of the App Store.",
+            ]}
+          />
+        </Section>
+
+        <Section title="6. Free Tier Limitations">
           The free tier includes: up to 5 AI chat messages per day, tracking for 1
           child, and access to basic daily tasks. Weekly reports and advanced tasks
           require a BloomPath Pro subscription.
         </Section>
 
-        <Section title="6. AI-Generated Content Disclaimer">
+        <Section title="7. AI-Generated Content Disclaimer">
           The AI mentor provides general parenting guidance based on established
           methodologies. It is not a substitute for professional medical, psychological,
           or educational advice. Always consult qualified professionals for specific
           concerns about your child&apos;s development.
         </Section>
 
-        <Section title="7. User Conduct">
+        <Section title="8. User Conduct">
           You agree not to misuse the App, attempt to reverse-engineer it, or use it
           for any unlawful purpose. You are solely responsible for the content you
           input into the App.
         </Section>
 
-        <Section title="8. Intellectual Property">
+        <Section title="9. Intellectual Property">
           All content, design, and technology in BloomPath are owned by Quakr. You
           may not copy, modify, or distribute any part of the App without prior
           written consent.
         </Section>
 
-        <Section title="9. Limitation of Liability">
+        <Section title="10. Limitation of Liability">
           BloomPath is provided &quot;as is&quot; without warranties of any kind. We are not
           liable for any damages arising from your use of the App, including but not
           limited to data loss, service interruptions, or reliance on AI-generated
           content.
         </Section>
 
-        <Section title="10. Termination">
+        <Section title="11. Termination">
           We reserve the right to suspend or terminate your account if you violate
           these terms. You may delete your account at any time through the App
           settings.
         </Section>
 
-        <Section title="11. Changes to Terms">
+        <Section title="12. Changes to Terms">
           We may update these Terms from time to time. Continued use of the App after
           changes constitutes acceptance of the new terms.
         </Section>
 
-        <Section title="12. Governing Law">
+        <Section title="13. Governing Law">
           These Terms are governed by the laws of Taiwan (R.O.C.).
         </Section>
 
-        <Section title="13. Contact Us">
+        <Section title="14. Contact Us">
           If you have questions about these Terms, please contact us at:{" "}
           <a href="mailto:support@quakr.dev" className="text-primary hover:underline">
             support@quakr.dev
