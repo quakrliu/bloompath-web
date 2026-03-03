@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { useTranslation } from "./LanguageProvider";
 
@@ -13,8 +14,15 @@ export function Header() {
           href="/"
           className="flex items-center gap-2 text-text font-bold tracking-wide"
         >
-          <span className="text-lg">🌱</span>
-          <span>BloomPath</span>
+          <Image
+            src="/logo.png"
+            alt="育見未來 BloomPath"
+            width={32}
+            height={32}
+            className="rounded-lg"
+          />
+          <span>育見未來</span>
+          <span className="text-text-muted font-semibold text-sm">BloomPath</span>
         </Link>
 
         <div className="flex items-center gap-1 text-sm">
