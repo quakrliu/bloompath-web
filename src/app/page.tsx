@@ -38,6 +38,25 @@ function IconReport() {
   );
 }
 
+function IconBook() {
+  return (
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#C9AD7C" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+      <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z" />
+      <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z" />
+    </svg>
+  );
+}
+
+function IconSpeaker() {
+  return (
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#B8A9C9" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+      <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5" />
+      <path d="M15.54 8.46a5 5 0 0 1 0 7.07" />
+      <path d="M19.07 4.93a10 10 0 0 1 0 14.14" />
+    </svg>
+  );
+}
+
 function IconPain({ d }: { d: string }) {
   return (
     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#9E9690" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -172,6 +191,79 @@ export default function Home() {
               </p>
             </div>
           ))}
+        </div>
+      </section>
+
+      {/* AI Story Showcase */}
+      <section className="max-w-4xl mx-auto px-6 pb-20">
+        {/* Header */}
+        <div className="text-center mb-10">
+          <span className="inline-block text-xs font-bold text-primary-dark bg-primary/12 rounded-full px-4 py-1.5 mb-4 tracking-wide">
+            {h.storyShowcase.badge}
+          </span>
+          <h2 className="text-2xl sm:text-3xl font-extrabold text-text mb-3">
+            {h.storyShowcase.title}
+          </h2>
+          <p className="text-lg text-text-secondary font-semibold mb-3">
+            {h.storyShowcase.subtitle}
+          </p>
+          <p className="text-sm text-text-muted leading-relaxed max-w-2xl mx-auto">
+            {h.storyShowcase.description}
+          </p>
+        </div>
+
+        {/* How it works — horizontal steps */}
+        <div className="bg-white rounded-2xl p-6 sm:p-8 shadow-sm border border-border/50 mb-6">
+          <h3 className="font-bold text-text mb-5 flex items-center gap-2">
+            <IconBook />
+            {h.storyShowcase.howTitle}
+          </h3>
+          <div className="grid sm:grid-cols-4 gap-4">
+            {h.storyShowcase.howSteps.map((step, i) => (
+              <div key={i} className="flex sm:flex-col items-center sm:text-center gap-3 sm:gap-2">
+                <div className="w-8 h-8 rounded-full bg-primary/15 text-text-secondary font-bold text-sm flex items-center justify-center shrink-0">
+                  {i + 1}
+                </div>
+                <p className="text-sm text-text-secondary leading-relaxed">
+                  {step}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Age-based story length */}
+        <div className="bg-white rounded-2xl p-6 sm:p-8 shadow-sm border border-border/50">
+          <h3 className="font-bold text-text mb-1">{h.storyShowcase.ageTitle}</h3>
+          <p className="text-sm text-text-muted mb-5">{h.storyShowcase.ageSubtitle}</p>
+
+          <div className="space-y-3">
+            {h.storyShowcase.ageItems.map((item, i) => (
+              <div
+                key={i}
+                className="flex items-center gap-4 rounded-xl px-4 py-3"
+                style={{ background: `rgba(184,169,201,${0.04 + i * 0.03})` }}
+              >
+                <span className="text-sm font-bold text-primary-dark w-16 sm:w-20 shrink-0">
+                  {item.age}
+                </span>
+                <span className="text-sm text-text-secondary w-28 sm:w-32 shrink-0">
+                  {item.length}
+                </span>
+                <span className="text-xs text-text-muted flex items-center gap-1 w-20 shrink-0">
+                  <IconSpeaker />
+                  {item.time}
+                </span>
+                <span className="text-xs text-text-muted hidden sm:block">
+                  {item.theme}
+                </span>
+              </div>
+            ))}
+          </div>
+
+          <p className="text-xs text-text-muted mt-4 text-center italic">
+            {h.storyShowcase.ageFootnote}
+          </p>
         </div>
       </section>
 

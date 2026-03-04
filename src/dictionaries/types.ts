@@ -44,6 +44,18 @@ export interface Dictionary {
       title: string;
       steps: Array<{ title: string; desc: string }>;
     };
+    storyShowcase: {
+      badge: string;
+      title: string;
+      subtitle: string;
+      description: string;
+      howTitle: string;
+      howSteps: string[];
+      ageTitle: string;
+      ageSubtitle: string;
+      ageItems: Array<{ age: string; length: string; time: string; theme: string }>;
+      ageFootnote: string;
+    };
     stats: Array<{ value: string; label: string }>;
     cta: {
       title: string;
