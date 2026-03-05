@@ -20,6 +20,13 @@ export function Footer() {
         <a href="/terms" className="hover:text-primary-dark transition-colors">
           {t.common.termsOfService}
         </a>
+        <span className="hidden sm:inline text-border">|</span>
+        <a
+          href="mailto:bloompath@quakr.dev"
+          className="hover:text-primary-dark transition-colors"
+        >
+          {t.common.supportEmail}
+        </a>
       </div>
     </footer>
   );

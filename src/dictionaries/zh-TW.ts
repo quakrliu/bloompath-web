@@ -6,6 +6,7 @@ const zhTW: Dictionary = {
     privacyPolicy: "隱私政策",
     termsOfService: "服務條款",
     copyright: "Quakr",
+    supportEmail: "客服信箱：bloompath@quakr.dev",
   },
   home: {
     hero: {

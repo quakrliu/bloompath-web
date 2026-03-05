@@ -6,6 +6,7 @@ const en: Dictionary = {
     privacyPolicy: "Privacy Policy",
     termsOfService: "Terms of Service",
     copyright: "Quakr",
+    supportEmail: "Support: bloompath@quakr.dev",
   },
   home: {
     hero: {
