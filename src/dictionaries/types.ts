@@ -20,6 +20,20 @@ export interface Dictionary {
       tagline: string;
       taglineBreak: string;
       subtitle: string;
+      emailPlaceholder: string;
+      emailCta: string;
+      stat1Value: string;
+      stat1Label: string;
+      stat2Value: string;
+      stat2Label: string;
+    };
+    socialProof: {
+      items: string[];
+    };
+    appDemo: {
+      title: string;
+      subtitle: string;
+      screens: Array<{ title: string; desc: string }>;
     };
     painPoints: {
       title: string;
@@ -32,6 +46,16 @@ export interface Dictionary {
       line2: string;
     };
     features: Array<{ title: string; solves: string; desc: string }>;
+    ageNavigator: {
+      title: string;
+      subtitle: string;
+      groups: Array<{
+        range: string;
+        label: string;
+        desc: string;
+        features: string[];
+      }>;
+    };
     differentiators: {
       title: string;
       subtitle: string;
@@ -57,7 +81,26 @@ export interface Dictionary {
       ageItems: Array<{ age: string; length: string; time: string; theme: string }>;
       ageFootnote: string;
     };
+    testimonials: {
+      title: string;
+      items: Array<{ quote: string; author: string; childAge: string; seed: number }>;
+    };
+    pricing: {
+      title: string;
+      subtitle: string;
+      earlyBird: string;
+      free: { name: string; price: string; desc: string; features: string[]; cta: string };
+      pro: { name: string; price: string; originalPrice: string; period: string; desc: string; features: string[]; cta: string };
+    };
     stats: Array<{ value: string; label: string }>;
+    emailCapture: {
+      title: string;
+      subtitle: string;
+      placeholder: string;
+      cta: string;
+      disclaimer: string;
+      success: string;
+    };
     cta: {
       title: string;
       subtitle: string;
