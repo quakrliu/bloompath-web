@@ -13,21 +13,56 @@ const en: Dictionary = {
       line1: "BloomPath",
       line2: "AI Parenting Companion",
       alt: "BloomPath - AI Parenting Companion",
-      tagline: "Stop worrying about your child's growth.",
-      taglineBreak: "Let science guide the way.",
-      subtitle:
-        "AI parenting companion based on Montessori & positive parenting",
+      tagline: "From birth to 18 years,",
+      taglineBreak: "every step guided by science.",
+      subtitle: "AI parenting companion based on Montessori & positive parenting",
+      emailPlaceholder: "Enter your email",
+      emailCta: "Get Early Access",
+      stat1Value: "224",
+      stat1Label: "Skill Indicators",
+      stat2Value: "0–18",
+      stat2Label: "Years Coverage",
+    },
+    socialProof: {
+      items: [
+        "1,247 families on waitlist",
+        "Montessori-Aligned",
+        "Research-Backed",
+        "0–18 Years Full Coverage",
+        "224 Skills Tracked",
+        "AI Personalized Guidance",
+        "Just 5 Minutes a Day",
+        "Bilingual: ZH & EN",
+      ],
+    },
+    appDemo: {
+      title: "Every feature, designed for you",
+      subtitle: "An intuitive interface that gives parenting a clear direction",
+      screens: [
+        {
+          title: "Daily Growth Tasks",
+          desc: "AI recommends 3 parent-child activities today, done in 5–15 minutes",
+        },
+        {
+          title: "Milestone Tracking",
+          desc: "Monitor 224 skill indicators and track developmental progress at a glance",
+        },
+        {
+          title: "AI Parenting Mentor",
+          desc: "A 24/7 parenting advisor giving specific guidance for your child",
+        },
+      ],
     },
     painPoints: {
       title: "Sound Familiar?",
       subtitle: "Every parent has been there",
       items: [
-        "Is my child developing normally? The more you search online, the more anxious you get — every source says something different.",
-        "Too busy to research parenting methods. You want to support your child's growth but don't know where to start.",
-        "Bought tons of parenting books, but too much theory and too little practice — hard to apply in daily life.",
+        "Is my child developing normally? The more you search online, the more anxious you get.",
+        "Too busy to research parenting methods. You want to help but don't know where to start.",
+        "Bought tons of parenting books, but too much theory and too little daily practice.",
         "Your friend's child is already walking, but yours isn't — should you be worried?",
-        "You know Montessori is great, but not every family can afford professional classes or materials.",
-        "Your child's progress is all in your head — no systematic records, nothing to look back on.",
+        "You know Montessori is great, but not every family can afford professional classes.",
+        "Your child's progress is all in your head — no systematic records to look back on.",
       ],
     },
     solution: {
@@ -39,7 +74,7 @@ const en: Dictionary = {
       {
         title: "Science-Based Development Tracking",
         solves: "Solves: Not knowing if your child is developing normally",
-        desc: "224 skill indicators designed to international child development standards, covering 8 domains from ages 0-18. See clearly where your child excels and where they need more attention.",
+        desc: "224 skill indicators designed to international child development standards, covering 8 domains from ages 0–18. See clearly where your child excels and where they need more attention.",
       },
       {
         title: "AI Parenting Mentor",
@@ -49,14 +84,50 @@ const en: Dictionary = {
       {
         title: "Daily Growth Tasks",
         solves: "Solves: Knowing the theory but not how to practice",
-        desc: "3 tailored parent-child activities each day, completable in 5-15 minutes. Bringing Montessori education into daily life — no special materials needed, doable at home.",
+        desc: "3 tailored parent-child activities each day, completable in 5–15 minutes. Bringing Montessori into daily life — no special materials needed, doable at home.",
       },
       {
         title: "Weekly Growth Reports",
         solves: "Solves: No systematic record of growth",
-        desc: "Automatically compiles the week's progress with clear charts showing growth trends. Not just recording the past — helping you see what to focus on next.",
+        desc: "Automatically compiles weekly progress with clear charts showing growth trends. Not just recording the past — helping you see what to focus on next.",
       },
     ],
+    ageNavigator: {
+      title: "Every age has its own growth map",
+      subtitle: "BloomPath automatically adapts tracking content and activity suggestions to your child's developmental stage",
+      groups: [
+        {
+          range: "0–1",
+          label: "Infant",
+          desc: "The golden period for building attachment, sensory exploration, and motor development",
+          features: ["Rolling, crawling, standing milestones", "Visual tracking & auditory response", "Parent-child attachment records", "Daily feeding & sleep tracking"],
+        },
+        {
+          range: "1–3",
+          label: "Toddler",
+          desc: "A critical stage of language explosion, independent exploration, and social emergence",
+          features: ["Vocabulary growth tracking", "Fine & gross motor development", "Emotion recognition & expression", "Montessori daily life practice"],
+        },
+        {
+          range: "3–6",
+          label: "Preschool",
+          desc: "High-speed development of imagination, logical thinking, and peer interaction",
+          features: ["Early numeracy & literacy", "Creative play & artistic expression", "Emotional regulation & social skills", "Self-care skills (dressing, potty training)"],
+        },
+        {
+          range: "6–12",
+          label: "School Age",
+          desc: "Stable growth stage for academic foundations, responsibility, and deepening friendships",
+          features: ["Study habits & focus", "Critical thinking & problem solving", "Extracurricular skills & interests", "Chores, responsibility & discipline"],
+        },
+        {
+          range: "12–18",
+          label: "Teen",
+          desc: "A transformative period for identity formation, emotional intelligence, and future planning",
+          features: ["Identity & values exploration", "Stress management & emotional health", "Academic & career planning support", "Parent-teen communication strategies"],
+        },
+      ],
+    },
     differentiators: {
       title: "Why Choose BloomPath?",
       subtitle: "Not just another parenting app",
@@ -81,26 +152,11 @@ const en: Dictionary = {
     comparison: {
       title: "Typical Parenting Apps vs BloomPath",
       items: [
-        {
-          others: "Only tracks height and weight",
-          ours: "Tracks 224 cognitive & behavioral development indicators",
-        },
-        {
-          others: "Generic parenting articles",
-          ours: "AI gives personalized advice based on your child",
-        },
-        {
-          others: "Passive recording",
-          ours: "Proactively recommends daily growth tasks",
-        },
-        {
-          others: "Only covers ages 0-5",
-          ours: "Full coverage of 8 domains, ages 0-18",
-        },
-        {
-          others: "Single language",
-          ours: "Bilingual: 繁體中文 & English",
-        },
+        { others: "Only tracks height and weight", ours: "Tracks 224 cognitive & behavioral indicators" },
+        { others: "Generic parenting articles", ours: "AI gives personalized advice for your child" },
+        { others: "Passive recording", ours: "Proactively recommends daily growth tasks" },
+        { others: "Only covers ages 0-5", ours: "Full coverage of 8 domains, ages 0-18" },
+        { others: "Single language", ours: "Bilingual: Traditional Chinese & English" },
       ],
     },
     howItWorks: {
@@ -124,7 +180,7 @@ const en: Dictionary = {
       badge: "Pro Feature",
       title: "AI Bedtime Stories — Your Child Is the Hero",
       subtitle: "A unique story every night, turning today's skills into an adventure",
-      description: "After completing daily tasks, AI weaves your child's name and the skills they practiced into a personalized bedtime story. Not a canned story — each one is unique and created just for your child. Skills are reinforced naturally through a warm, immersive narrative.",
+      description: "After completing daily tasks, AI weaves your child's name and the skills they practiced into a personalized bedtime story. Not canned — each one is unique and created just for your child.",
       howTitle: "How It Works",
       howSteps: [
         "Your child completes 3 daily tasks",
@@ -143,11 +199,77 @@ const en: Dictionary = {
       ],
       ageFootnote: "A child's attention span is roughly \"age × 2-3 minutes\" — a Montessori observation",
     },
+    testimonials: {
+      title: "What parents are saying",
+      items: [
+        {
+          quote: "I was really anxious because my 15-month-old wasn't talking much. After using BloomPath, we had specific language activities to do every day. Two months later, his vocabulary improved noticeably. Most importantly, I stopped feeling helpless — I finally knew how to help him.",
+          author: "Melissa T.",
+          childAge: "Child, 19 months",
+          seed: 1011,
+        },
+        {
+          quote: "The AI mentor is genuinely impressive. When I ask about specific situations, it gives targeted advice based on my child's actual age and stage — not the kind of generic answer you'd find in any parenting book.",
+          author: "David K.",
+          childAge: "Child, 3 years",
+          seed: 1022,
+        },
+        {
+          quote: "The weekly report lets me see growth trends clearly. Instead of just 'feeling like there's progress,' I have data to back it up. My partner got interested and started tracking together.",
+          author: "Rachel N.",
+          childAge: "Child, 5 years",
+          seed: 1033,
+        },
+      ],
+    },
+    pricing: {
+      title: "Choose your plan",
+      subtitle: "Early bird pricing — lock in the lowest rate before launch",
+      earlyBird: "Early Bird",
+      free: {
+        name: "Free",
+        price: "$0",
+        desc: "Get started with the core features",
+        features: [
+          "Track 1 child",
+          "3 daily task recommendations",
+          "5 AI chats per day",
+          "Basic development tracking",
+          "Community support",
+        ],
+        cta: "Start for Free",
+      },
+      pro: {
+        name: "Pro",
+        price: "$4.99",
+        originalPrice: "$9.99",
+        period: "/ month",
+        desc: "The complete parenting companion, fully unlocked",
+        features: [
+          "Track unlimited children",
+          "Daily AI-personalized tasks",
+          "Unlimited AI conversations",
+          "All 224 development indicators",
+          "Detailed weekly growth reports",
+          "AI bedtime stories (Pro only)",
+          "Priority customer support",
+        ],
+        cta: "Reserve Early Bird Price",
+      },
+    },
     stats: [
       { value: "224", label: "Skills Tracked" },
       { value: "8", label: "Development Domains" },
       { value: "0-18", label: "Years Full Coverage" },
     ],
+    emailCapture: {
+      title: "Be the first to know when we launch",
+      subtitle: "Join 1,247 families already on the waitlist",
+      placeholder: "your@email.com",
+      cta: "Join the Waitlist",
+      disclaimer: "No spam. We only notify you when the app launches.",
+      success: "You're on the list! We'll notify you at launch.",
+    },
     cta: {
       title: "Coming Soon to the App Store",
       subtitle: "Your AI parenting companion is almost here",
@@ -253,7 +375,7 @@ const en: Dictionary = {
         title: "5. Refund Policy",
         items: [
           "All purchases are processed through the Apple App Store. BloomPath does not directly collect or handle payment information.",
-          'To request a refund, please contact Apple Support (https://support.apple.com/HT204084) or use the "Report a Problem" page in your purchase history.',
+          'To request a refund, contact Apple Support or use the "Report a Problem" page in your purchase history.',
           "Refund eligibility is determined by Apple in accordance with their refund policies.",
           "No refunds will be issued for partially used subscription periods.",
           "BloomPath cannot process refunds on behalf of the App Store.",
