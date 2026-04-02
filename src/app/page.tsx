@@ -165,6 +165,12 @@ function PhoneScreen({ screen }: { screen: PhoneScreenKey }) {
   );
 }
 
+const screenImages: Record<PhoneScreenKey, string> = {
+  tasks: "/images/app-roadmap.png",
+  tracking: "/images/app-roadmap-detail.png",
+  ai: "/images/app-mentor.png",
+};
+
 function PhoneMockup({ screen, isCenter = false }: { screen: PhoneScreenKey; isCenter?: boolean }) {
   return (
     <div
@@ -177,9 +183,15 @@ function PhoneMockup({ screen, isCenter = false }: { screen: PhoneScreenKey; isC
       <div className="absolute inset-[3px] rounded-[33px] bg-stone-900 overflow-hidden">
         {/* Dynamic island */}
         <div className="absolute top-2.5 left-1/2 -translate-x-1/2 w-16 h-4 bg-stone-900 rounded-full z-20" />
-        {/* Screen content */}
+        {/* Screen content — real app screenshots */}
         <div className="absolute inset-0 rounded-[30px] overflow-hidden">
-          <PhoneScreen screen={screen} />
+          <Image
+            src={screenImages[screen]}
+            alt={`BloomPath ${screen} screen`}
+            fill
+            className="object-cover object-top"
+            sizes="200px"
+          />
         </div>
       </div>
       {/* Side button */}
