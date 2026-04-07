@@ -277,30 +277,43 @@ export default function Home() {
   return (
     <main className="min-h-screen overflow-x-hidden">
 
-      {/* ── 1. HERO — Split Screen ── */}
+      {/* ── 1. HERO — Parezy-inspired with photo + blobs ── */}
       <section className="relative min-h-[100dvh] flex items-center overflow-hidden">
-        {/* Background gradient */}
-        <div className="absolute inset-0 bg-gradient-to-br from-[#F0EDE8] via-cream to-[#E8EDE8]" />
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_80%_20%,rgba(141,155,142,0.15),transparent_60%)]" />
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_20%_80%,rgba(196,168,130,0.1),transparent_60%)]" />
+        {/* Background photo */}
+        <div className="absolute inset-0">
+          <Image
+            src={locale === "zh-TW" ? "/images/hero-zh.jpg" : "/images/hero-en.jpg"}
+            alt=""
+            fill
+            className="object-cover object-center"
+            priority
+          />
+          {/* Soft overlay to keep text readable */}
+          <div className="absolute inset-0 bg-gradient-to-r from-[#FBF8F4]/90 via-[#FBF8F4]/75 to-[#FBF8F4]/40 lg:to-transparent" />
+        </div>
+
+        {/* Animated blob shapes on top */}
+        <div className="blob blob-animate absolute -top-20 -right-20 w-[500px] h-[500px] bg-mint/20 blur-3xl" />
+        <div className="blob blob-animate absolute -bottom-32 -left-32 w-[600px] h-[600px] bg-peach/15 blur-3xl" style={{ animationDelay: "-3s" }} />
+        <div className="blob blob-animate absolute top-1/3 left-1/2 w-[300px] h-[300px] bg-lavender/15 blur-3xl" style={{ animationDelay: "-5s" }} />
 
         <div className="relative w-full max-w-7xl mx-auto px-6 lg:px-12 py-20 lg:py-0">
-          <div className="grid lg:grid-cols-[1fr_auto] gap-12 lg:gap-16 items-center">
+          <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
 
             {/* Left: Content */}
             <div className="max-w-xl">
               {/* Badge */}
-              <div className="inline-flex items-center gap-2 bg-white/70 border border-border rounded-full px-4 py-1.5 mb-8 animate-fade-up">
-                <div className="w-2 h-2 rounded-full bg-primary animate-pulse-dot" />
-                <span className="text-xs font-bold text-text-secondary tracking-wide uppercase">{h.cta.badge}</span>
+              <div className="inline-flex items-center gap-2 bg-white/80 backdrop-blur-sm border border-primary/20 rounded-full px-5 py-2 mb-8 animate-fade-up shadow-sm">
+                <div className="w-2.5 h-2.5 rounded-full bg-primary animate-pulse-dot" />
+                <span className="text-xs font-extrabold text-primary-dark tracking-wide uppercase">{h.cta.badge}</span>
               </div>
 
               {/* Headline */}
               <h1 className="mb-6 animate-fade-up delay-100">
-                <span className="block text-5xl md:text-6xl lg:text-7xl font-extrabold text-text tracking-tighter leading-none mb-3">
+                <span className="block text-5xl md:text-6xl lg:text-7xl font-extrabold text-text tracking-tighter leading-[0.95] mb-4">
                   {h.hero.line1}
                 </span>
-                <span className="block text-lg md:text-xl text-text-muted font-semibold tracking-widest uppercase">
+                <span className="block text-lg md:text-xl text-primary-dark font-bold tracking-widest uppercase">
                   {h.hero.line2}
                 </span>
               </h1>
@@ -311,53 +324,43 @@ export default function Home() {
                 <br />
                 {h.hero.taglineBreak}
               </p>
-              <p className="text-base text-text-muted mb-8 animate-fade-up delay-300">
+              <p className="text-base text-text-muted mb-10 animate-fade-up delay-300">
                 {h.hero.subtitle}
               </p>
 
               {/* Stats pills */}
-              <div className="flex gap-3 mb-8 animate-fade-up delay-400">
-                <div className="bg-white/80 border border-border rounded-xl px-4 py-2.5 text-center">
+              <div className="flex gap-3 mb-10 animate-fade-up delay-400">
+                <div className="bg-white/90 backdrop-blur-sm border border-border/50 rounded-2xl px-5 py-3 text-center shadow-sm">
                   <div className="text-2xl font-extrabold text-text tracking-tighter">{h.hero.stat1Value}</div>
-                  <div className="text-xs text-text-muted">{h.hero.stat1Label}</div>
+                  <div className="text-xs text-text-muted font-medium">{h.hero.stat1Label}</div>
                 </div>
-                <div className="bg-white/80 border border-border rounded-xl px-4 py-2.5 text-center">
+                <div className="bg-white/90 backdrop-blur-sm border border-border/50 rounded-2xl px-5 py-3 text-center shadow-sm">
                   <div className="text-2xl font-extrabold text-text tracking-tighter">{h.hero.stat2Value}</div>
-                  <div className="text-xs text-text-muted">{h.hero.stat2Label}</div>
-                </div>
-                <div className="bg-primary/15 border border-primary/30 rounded-xl px-4 py-2.5 text-center">
-                  <div className="text-2xl font-extrabold text-primary-dark tracking-tighter">1,247</div>
-                  <div className="text-xs text-text-muted">on waitlist</div>
+                  <div className="text-xs text-text-muted font-medium">{h.hero.stat2Label}</div>
                 </div>
               </div>
 
-              {/* Download button */}
+              {/* Download button — large, rounded, playful */}
               <div className="animate-fade-up delay-500">
-                <a href={h.appStoreUrl} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-3 bg-secondary text-white rounded-2xl px-8 py-4 text-base font-bold hover:bg-secondary/90 transition-colors shadow-lg">
+                <a href={h.appStoreUrl} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-3 bg-primary text-white rounded-full px-10 py-5 text-lg font-extrabold hover:bg-primary-dark hover:scale-105 transition-all duration-300 shadow-[0_8px_30px_-6px_rgba(139,181,162,0.5)]">
                   <IconApple />
                   {h.emailCapture.cta}
                 </a>
-                <p className="text-sm text-text-muted mt-3">{h.emailCapture.disclaimer}</p>
-              </div>
-
-              {/* App store badge */}
-              <div className="mt-6 flex items-center gap-2 animate-fade-up delay-600">
-                <a href={h.appStoreUrl} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 bg-stone-900 text-white rounded-xl px-4 py-2.5 text-sm font-semibold hover:bg-stone-800 transition-colors">
-                  <IconApple />
-                  <span>App Store</span>
-                  <span className="text-stone-400 text-xs">· {h.cta.badge}</span>
-                </a>
+                <p className="text-sm text-text-muted mt-4">{h.emailCapture.disclaimer}</p>
               </div>
             </div>
 
-            {/* Right: Phone mockup */}
+            {/* Right: Phone mockup with decorative blobs */}
             <div className="hidden lg:flex items-center justify-center relative animate-fade-up delay-300">
-              <div className="animate-float">
+              {/* Decorative circle behind phone */}
+              <div className="absolute w-[320px] h-[320px] rounded-full bg-gradient-to-br from-mint/50 to-lavender/30 blur-sm" />
+
+              <div className="relative animate-float">
                 <PhoneMockup screen={slides[activeSlide] as PhoneScreenKey} isCenter locale={locale} />
               </div>
 
               {/* Floating cards */}
-              <div className="absolute -left-16 top-16 bg-white rounded-2xl p-3 shadow-[0_8px_32px_-8px_rgba(74,69,67,0.12)] border border-border/50 min-w-[130px] animate-fade-up delay-500">
+              <div className="absolute -left-16 top-16 bg-white/95 backdrop-blur-sm rounded-2xl p-3 shadow-[0_8px_32px_-8px_rgba(74,69,67,0.15)] border border-border/30 min-w-[130px] animate-bounce-in delay-500">
                 <div className="flex items-center gap-2 mb-1.5">
                   <div className="w-7 h-7 rounded-xl bg-primary/20 flex items-center justify-center">
                     <IconCheck className="text-primary-dark" />
@@ -450,7 +453,7 @@ export default function Home() {
       </section>
 
       {/* ── 4. FEATURES — 2-col zig-zag (NOT 3-col equal) ── */}
-      <section className="py-20 md:py-28 bg-white/40">
+      <section className="py-20 md:py-28 section-mint">
         <div className="max-w-5xl mx-auto px-6">
           <div className="mb-14">
             <span className="inline-block text-xs font-bold text-secondary bg-secondary/15 rounded-full px-4 py-1.5 mb-4 tracking-wide uppercase">
@@ -467,48 +470,18 @@ export default function Home() {
                 key={i}
                 className={`grid md:grid-cols-2 gap-8 items-center ${i % 2 === 1 ? "md:[direction:rtl]" : ""}`}
               >
-                {/* Visual panel */}
-                <div className={`rounded-3xl p-8 min-h-[200px] flex items-center justify-center ${i % 2 === 1 ? "md:[direction:ltr]" : ""}`}
-                  style={{
-                    background: [
-                      "linear-gradient(135deg, rgba(141,155,142,0.15) 0%, rgba(245,240,235,0.8) 100%)",
-                      "linear-gradient(135deg, rgba(196,168,130,0.15) 0%, rgba(245,240,235,0.8) 100%)",
-                      "linear-gradient(135deg, rgba(212,181,176,0.15) 0%, rgba(245,240,235,0.8) 100%)",
-                      "linear-gradient(135deg, rgba(141,155,142,0.12) 0%, rgba(196,168,130,0.12) 100%)",
-                    ][i]
-                  }}
-                >
-                  {/* Feature visual: large number + icon area */}
-                  <div className="text-center">
-                    <div
-                      className="w-16 h-16 rounded-2xl mx-auto mb-4 flex items-center justify-center"
-                      style={{ background: ["rgba(141,155,142,0.25)", "rgba(196,168,130,0.25)", "rgba(212,181,176,0.25)", "rgba(141,155,142,0.2)"][i] }}
-                    >
-                      {i === 0 && (
-                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#8D9B8E" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
-                          <line x1="18" y1="20" x2="18" y2="10" /><line x1="12" y1="20" x2="12" y2="4" /><line x1="6" y1="20" x2="6" y2="14" />
-                        </svg>
-                      )}
-                      {i === 1 && (
-                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#C4A882" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
-                          <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
-                        </svg>
-                      )}
-                      {i === 2 && (
-                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#D4B5B0" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
-                          <path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z" />
-                          <path d="m9 12 2 2 4-4" />
-                        </svg>
-                      )}
-                      {i === 3 && (
-                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#8D9B8E" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
-                          <polyline points="22 12 18 12 15 21 9 3 6 12 2 12" />
-                        </svg>
-                      )}
-                    </div>
-                    <p className="text-4xl font-extrabold text-text/10 tracking-tighter select-none">
-                      {["224", "AI", "5'", "7d"][i]}
-                    </p>
+                {/* Visual panel — photo with rounded corners */}
+                <div className={`relative rounded-3xl overflow-hidden min-h-[260px] ${i % 2 === 1 ? "md:[direction:ltr]" : ""}`}>
+                  <Image
+                    src={["/images/section-worry.jpg", "/images/section-play.jpg", "/images/section-phone.jpg", "/images/section-bedtime.jpg"][i]}
+                    alt=""
+                    fill
+                    className="object-cover"
+                  />
+                  {/* Subtle overlay with icon */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
+                  <div className="absolute bottom-4 left-4 w-12 h-12 rounded-2xl bg-white/90 backdrop-blur-sm flex items-center justify-center shadow-sm text-xl">
+                    {["📊", "💬", "✅", "📈"][i]}
                   </div>
                 </div>
 
