@@ -363,9 +363,9 @@ export default function Home() {
                   <div className="w-7 h-7 rounded-xl bg-primary/20 flex items-center justify-center">
                     <IconCheck className="text-primary-dark" />
                   </div>
-                  <span className="text-xs font-bold text-text">任務完成</span>
+                  <span className="text-xs font-bold text-text">{locale === "zh-TW" ? "任務完成" : "Task Done"}</span>
                 </div>
-                <p className="text-[10px] text-text-muted">每日成長任務 2/3</p>
+                <p className="text-[10px] text-text-muted">{locale === "zh-TW" ? "每日成長任務 2/3" : "Daily Tasks 2/3"}</p>
                 <div className="mt-1.5 h-1 rounded-full bg-border overflow-hidden">
                   <div className="h-full bg-primary rounded-full" style={{ width: "67%" }} />
                 </div>
