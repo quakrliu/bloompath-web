@@ -16,13 +16,13 @@ export function Header() {
         >
           <Image
             src="/logo.png"
-            alt="育見未來 BloomPath"
+            alt="BloomPath"
             width={32}
             height={32}
             className="rounded-lg"
           />
-          <span>育見未來</span>
-          <span className="text-text-muted font-semibold text-sm">BloomPath</span>
+          {locale === "zh-TW" && <span>育見未來</span>}
+          <span className={locale === "zh-TW" ? "text-text-muted font-semibold text-sm" : "text-text font-bold"}>BloomPath</span>
         </Link>
 
         <div className="flex items-center gap-1 text-sm">
