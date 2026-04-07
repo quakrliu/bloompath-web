@@ -165,13 +165,16 @@ function PhoneScreen({ screen }: { screen: PhoneScreenKey }) {
   );
 }
 
-const screenImages: Record<PhoneScreenKey, string> = {
-  tasks: "/images/app-roadmap.png",
-  tracking: "/images/app-roadmap-detail.png",
-  ai: "/images/app-mentor.png",
-};
+function getScreenImage(screen: PhoneScreenKey, locale: string): string {
+  const images: Record<PhoneScreenKey, Record<string, string>> = {
+    tasks: { "zh-TW": "/images/app-roadmap.png", en: "/images/app-roadmap-en.png" },
+    tracking: { "zh-TW": "/images/app-roadmap-detail.png", en: "/images/app-roadmap-detail-en.png" },
+    ai: { "zh-TW": "/images/app-mentor.png", en: "/images/app-mentor.png" },
+  };
+  return images[screen][locale] ?? images[screen].en;
+}
 
-function PhoneMockup({ screen, isCenter = false }: { screen: PhoneScreenKey; isCenter?: boolean }) {
+function PhoneMockup({ screen, isCenter = false, locale = "zh-TW" }: { screen: PhoneScreenKey; isCenter?: boolean; locale?: string }) {
   return (
     <div
       className={`relative transition-all duration-500 ${isCenter ? "scale-100 z-10" : "scale-90 opacity-70"}`}
@@ -186,7 +189,7 @@ function PhoneMockup({ screen, isCenter = false }: { screen: PhoneScreenKey; isC
         {/* Screen content — real app screenshots */}
         <div className="absolute inset-0 rounded-[30px] overflow-hidden">
           <Image
-            src={screenImages[screen]}
+            src={getScreenImage(screen, locale)}
             alt={`BloomPath ${screen} screen`}
             fill
             className="object-cover object-top"
@@ -264,7 +267,7 @@ function EmailForm({ placeholder, cta, disclaimer, success }: { placeholder: str
 ───────────────────────────────────────────── */
 
 export default function Home() {
-  const { t } = useTranslation();
+  const { t, locale } = useTranslation();
   const h = t.home;
   const [activeSlide, setActiveSlide] = useState(1);
   const [activeAge, setActiveAge] = useState(0);
@@ -351,7 +354,7 @@ export default function Home() {
             {/* Right: Phone mockup */}
             <div className="hidden lg:flex items-center justify-center relative animate-fade-up delay-300">
               <div className="animate-float">
-                <PhoneMockup screen={slides[activeSlide] as PhoneScreenKey} isCenter />
+                <PhoneMockup screen={slides[activeSlide] as PhoneScreenKey} isCenter locale={locale} />
               </div>
 
               {/* Floating cards */}
@@ -423,7 +426,7 @@ export default function Home() {
                   className="transition-all duration-500 focus:outline-none"
                   aria-label={`View screen ${i + 1}`}
                 >
-                  <PhoneMockup screen={s} isCenter={i === activeSlide} />
+                  <PhoneMockup screen={s} isCenter={i === activeSlide} locale={locale} />
                 </button>
               ))}
             </div>
