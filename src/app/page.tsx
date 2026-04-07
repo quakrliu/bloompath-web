@@ -167,8 +167,8 @@ function PhoneScreen({ screen }: { screen: PhoneScreenKey }) {
 
 function getScreenImage(screen: PhoneScreenKey, locale: string): string {
   const images: Record<PhoneScreenKey, Record<string, string>> = {
-    tasks: { "zh-TW": "/images/app-welcome.png", en: "/images/app-roadmap-en.png" },
-    tracking: { "zh-TW": "/images/app-roadmap-detail.png", en: "/images/app-roadmap-detail-en.png" },
+    tasks: { "zh-TW": "/images/app-roadmap.png", en: "/images/app-roadmap-en.png" },
+    tracking: { "zh-TW": "/images/app-welcome.png", en: "/images/app-roadmap-detail-en.png" },
     ai: { "zh-TW": "/images/app-mentor.png", en: "/images/app-mentor-en.png" },
   };
   return images[screen][locale] ?? images[screen].en;
