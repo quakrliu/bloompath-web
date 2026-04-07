@@ -224,25 +224,25 @@ const en: Dictionary = {
     },
     pricing: {
       title: "Choose your plan",
-      subtitle: "Early bird pricing — lock in the lowest rate before launch",
-      earlyBird: "Early Bird",
+      subtitle: "Start free, upgrade when you're ready",
+      earlyBird: "",
       free: {
         name: "Free",
         price: "$0",
         desc: "Get started with the core features",
         features: [
           "Track 1 child",
-          "3 daily task recommendations",
-          "5 AI chats per day",
+          "1 daily task (all unlocked for first 3 days)",
+          "3 AI chats per day",
           "Basic development tracking",
-          "Community support",
+          "Email support",
         ],
         cta: "Start for Free",
       },
       pro: {
         name: "Pro",
-        price: "$4.99",
-        originalPrice: "$9.99",
+        price: "$8.99",
+        originalPrice: "",
         period: "/ month",
         desc: "The complete parenting companion, fully unlocked",
         features: [
@@ -254,7 +254,7 @@ const en: Dictionary = {
           "AI bedtime stories (Pro only)",
           "Priority customer support",
         ],
-        cta: "Reserve Early Bird Price",
+        cta: "Get BloomPath Pro",
       },
     },
     stats: [

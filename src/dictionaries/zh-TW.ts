@@ -224,25 +224,25 @@ const zhTW: Dictionary = {
     },
     pricing: {
       title: "選擇最適合你的方案",
-      subtitle: "早鳥限時優惠，正式上架前鎖定最低價",
-      earlyBird: "早鳥限定",
+      subtitle: "免費開始，隨時升級",
+      earlyBird: "",
       free: {
         name: "免費版",
         price: "NT$0",
         desc: "輕鬆入門，體驗核心功能",
         features: [
           "追蹤 1 位孩子",
-          "每日 3 個任務推薦",
-          "每天 5 則 AI 對話",
+          "每日 1 個任務（前 3 天解鎖全部）",
+          "每天 3 則 AI 對話",
           "基礎發展指標追蹤",
-          "社群支援",
+          "Email 客服",
         ],
         cta: "免費開始",
       },
       pro: {
         name: "Pro 方案",
-        price: "NT$149",
-        originalPrice: "NT$299",
+        price: "NT$180",
+        originalPrice: "",
         period: "/ 月",
         desc: "解鎖全部功能，最完整的育兒夥伴",
         features: [
@@ -254,7 +254,7 @@ const zhTW: Dictionary = {
           "AI 睡前故事（Pro 限定）",
           "優先客服支援",
         ],
-        cta: "搶先預約早鳥價",
+        cta: "升級 Pro",
       },
     },
     stats: [

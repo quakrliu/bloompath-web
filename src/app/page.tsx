@@ -733,16 +733,18 @@ export default function Home() {
 
             {/* Pro tier */}
             <div className="relative bg-white rounded-3xl p-8 border-2 border-primary/50 shadow-[0_20px_40px_-15px_rgba(141,155,142,0.25)]">
-              {/* Early bird badge */}
+              {/* Early bird badge — hidden when empty */}
+              {h.pricing.earlyBird && (
               <div className="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-secondary text-white text-xs font-bold px-4 py-1.5 rounded-full shadow-sm whitespace-nowrap">
-                {h.pricing.earlyBird} — 50% OFF
+                {h.pricing.earlyBird}
               </div>
+              )}
               <div className="mb-6">
                 <p className="text-sm font-bold text-primary-dark uppercase tracking-wide mb-2">{h.pricing.pro.name}</p>
                 <div className="flex items-baseline gap-2">
                   <span className="text-4xl font-extrabold text-text tracking-tighter">{h.pricing.pro.price}</span>
                   <span className="text-text-muted">{h.pricing.pro.period}</span>
-                  <span className="text-sm text-text-muted line-through">{h.pricing.pro.originalPrice}</span>
+                  {h.pricing.pro.originalPrice && <span className="text-sm text-text-muted line-through">{h.pricing.pro.originalPrice}</span>}
                 </div>
                 <p className="text-sm text-text-muted mt-2">{h.pricing.pro.desc}</p>
               </div>
