@@ -106,6 +106,7 @@ export interface Dictionary {
       subtitle: string;
       badge: string;
     };
+    appStoreUrl: string;
   };
   privacy: {
     title: string;

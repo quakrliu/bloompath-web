@@ -292,7 +292,7 @@ export default function Home() {
               {/* Badge */}
               <div className="inline-flex items-center gap-2 bg-white/70 border border-border rounded-full px-4 py-1.5 mb-8 animate-fade-up">
                 <div className="w-2 h-2 rounded-full bg-primary animate-pulse-dot" />
-                <span className="text-xs font-bold text-text-secondary tracking-wide uppercase">Coming to App Store</span>
+                <span className="text-xs font-bold text-text-secondary tracking-wide uppercase">{h.cta.badge}</span>
               </div>
 
               {/* Headline */}
@@ -331,23 +331,22 @@ export default function Home() {
                 </div>
               </div>
 
-              {/* Email form */}
+              {/* Download button */}
               <div className="animate-fade-up delay-500">
-                <EmailForm
-                  placeholder={h.hero.emailPlaceholder}
-                  cta={h.hero.emailCta}
-                  disclaimer={h.emailCapture.disclaimer}
-                  success={h.emailCapture.success}
-                />
+                <a href={h.appStoreUrl} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-3 bg-secondary text-white rounded-2xl px-8 py-4 text-base font-bold hover:bg-secondary/90 transition-colors shadow-lg">
+                  <IconApple />
+                  {h.emailCapture.cta}
+                </a>
+                <p className="text-sm text-text-muted mt-3">{h.emailCapture.disclaimer}</p>
               </div>
 
               {/* App store badge */}
               <div className="mt-6 flex items-center gap-2 animate-fade-up delay-600">
-                <div className="flex items-center gap-2 bg-stone-900 text-white rounded-xl px-4 py-2.5 text-sm font-semibold">
+                <a href={h.appStoreUrl} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 bg-stone-900 text-white rounded-xl px-4 py-2.5 text-sm font-semibold hover:bg-stone-800 transition-colors">
                   <IconApple />
                   <span>App Store</span>
-                  <span className="text-stone-400 text-xs">· Coming Soon</span>
-                </div>
+                  <span className="text-stone-400 text-xs">· {h.cta.badge}</span>
+                </a>
               </div>
             </div>
 
@@ -791,12 +790,11 @@ export default function Home() {
               {h.emailCapture.subtitle}
             </p>
 
-            <EmailForm
-              placeholder={h.emailCapture.placeholder}
-              cta={h.emailCapture.cta}
-              disclaimer={h.emailCapture.disclaimer}
-              success={h.emailCapture.success}
-            />
+            <a href={h.appStoreUrl} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-3 bg-stone-900 text-white rounded-2xl px-8 py-4 text-base font-bold hover:bg-stone-800 transition-colors shadow-lg">
+              <IconApple />
+              {h.emailCapture.cta}
+            </a>
+            <p className="text-sm text-text-muted mt-4">{h.emailCapture.disclaimer}</p>
 
             <div className="mt-8 flex items-center justify-center gap-6 text-xs text-text-muted">
               <div className="flex items-center gap-1.5">
