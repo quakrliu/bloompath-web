@@ -199,6 +199,22 @@ const en: Dictionary = {
       ],
       ageFootnote: "A child's attention span is roughly \"age × 2-3 minutes\" — a Montessori observation",
     },
+    meetMei: {
+      badge: "Meet Your Mentor",
+      title: "Say hi to Mei",
+      subtitle: "Montessori teacher · Mom to Luna (2.5 yrs) · Your AI parenting partner",
+      quote: "I was a Montessori teacher for 6 years before Luna was born. Now I'm a mom navigating the same questions you have — and I've built BloomPath to give you what I wish I had when I started: real, practical advice grounded in child development science.",
+      credentials: [
+        "Montessori-trained educator (AMS/AMI methods)",
+        "Host of the BloomPath YouTube channel",
+        "Author at bloom-path.app blog",
+        "Based in Bali, raising Luna bilingual (ZH/EN)",
+      ],
+      blogLabel: "Read Mei's blog",
+      blogUrl: "https://bloom-path.app/en/",
+      youtubeLabel: "Watch on YouTube",
+      youtubeUrl: "https://www.youtube.com/@bloompath",
+    },
     testimonials: {
       title: "What parents are saying",
       items: [

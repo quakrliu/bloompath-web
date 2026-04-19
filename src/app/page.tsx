@@ -497,6 +497,73 @@ export default function Home() {
         </div>
       </section>
 
+      {/* ── 4.5 MEET MEI ── */}
+      <section className="py-20 md:py-28 section-lavender relative overflow-hidden">
+        <div className="blob blob-animate absolute -top-20 -right-20 w-[400px] h-[400px] bg-lavender/30 blur-3xl" />
+        <div className="blob blob-animate absolute -bottom-20 -left-20 w-[400px] h-[400px] bg-peach/25 blur-3xl" style={{ animationDelay: "-4s" }} />
+
+        <div className="max-w-5xl mx-auto px-6 relative">
+          <div className="grid md:grid-cols-[auto_1fr] gap-10 md:gap-14 items-center">
+            {/* Left: Mei portrait */}
+            <div className="flex justify-center md:justify-start">
+              <div className="relative">
+                <div className="absolute inset-0 bg-gradient-to-br from-primary/30 to-lavender/40 rounded-full blur-2xl scale-110" />
+                <div className="relative w-56 h-56 md:w-64 md:h-64 rounded-full overflow-hidden border-4 border-white shadow-[0_20px_50px_-15px_rgba(139,181,162,0.4)]">
+                  <Image
+                    src="/images/mei-avatar.png"
+                    alt="Mei — BloomPath Mentor"
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+              </div>
+            </div>
+
+            {/* Right: Content */}
+            <div>
+              <span className="inline-block text-xs font-extrabold text-primary-dark bg-primary/15 rounded-full px-4 py-1.5 mb-4 tracking-wide uppercase">
+                {h.meetMei.badge}
+              </span>
+              <h2 className="text-3xl md:text-4xl font-extrabold text-text tracking-tighter mb-3">
+                {h.meetMei.title}
+              </h2>
+              <p className="text-base text-primary-dark font-semibold mb-6">
+                {h.meetMei.subtitle}
+              </p>
+              <blockquote className="text-text-secondary leading-relaxed mb-6 pl-4 border-l-4 border-primary/30 italic">
+                &ldquo;{h.meetMei.quote}&rdquo;
+              </blockquote>
+              <ul className="space-y-2 mb-8">
+                {h.meetMei.credentials.map((c, i) => (
+                  <li key={i} className="flex items-start gap-2 text-sm text-text-secondary">
+                    <span className="text-primary-dark mt-1 shrink-0">✓</span>
+                    <span>{c}</span>
+                  </li>
+                ))}
+              </ul>
+              <div className="flex flex-wrap gap-3">
+                <a
+                  href={h.meetMei.blogUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 bg-white border-2 border-primary/40 text-primary-dark rounded-full px-5 py-2.5 text-sm font-bold hover:bg-primary/5 transition-colors"
+                >
+                  {h.meetMei.blogLabel} →
+                </a>
+                <a
+                  href={h.meetMei.youtubeUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 bg-white border-2 border-border text-text rounded-full px-5 py-2.5 text-sm font-bold hover:bg-cream transition-colors"
+                >
+                  {h.meetMei.youtubeLabel} →
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* ── 5. AGE NAVIGATOR ── */}
       <section className="py-20 md:py-28 px-6">
         <div className="max-w-5xl mx-auto">

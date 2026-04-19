@@ -85,6 +85,17 @@ export interface Dictionary {
       title: string;
       items: Array<{ quote: string; author: string; childAge: string; seed: number }>;
     };
+    meetMei: {
+      badge: string;
+      title: string;
+      subtitle: string;
+      quote: string;
+      credentials: string[];
+      blogLabel: string;
+      blogUrl: string;
+      youtubeLabel: string;
+      youtubeUrl: string;
+    };
     pricing: {
       title: string;
       subtitle: string;

@@ -199,6 +199,22 @@ const zhTW: Dictionary = {
       ],
       ageFootnote: "兒童注意力持續時間約為「年齡 × 2-3 分鐘」— 蒙特梭利觀察法則",
     },
+    meetMei: {
+      badge: "認識你的育兒夥伴",
+      title: "嗨，我是 Mei",
+      subtitle: "蒙特梭利老師 · Luna（2 歲半）的媽媽 · 你的 AI 育兒夥伴",
+      quote: "在 Luna 出生之前，我當了 6 年的蒙特梭利老師。現在我也是媽媽，跟你一樣每天都在摸索育兒的各種問題。我做 BloomPath，是想給你當年我最希望有的東西：基於兒童發展科學、真正用得上的建議。",
+      credentials: [
+        "蒙特梭利認證教師（AMS/AMI）",
+        "BloomPath YouTube 頻道主持人",
+        "bloom-path.app 部落格作者",
+        "現居峇里島，雙語教養 Luna（中/英）",
+      ],
+      blogLabel: "看 Mei 的部落格",
+      blogUrl: "https://bloom-path.app/",
+      youtubeLabel: "到 YouTube 看影片",
+      youtubeUrl: "https://www.youtube.com/@bloompath",
+    },
     testimonials: {
       title: "真實家長的親身體驗",
       items: [
