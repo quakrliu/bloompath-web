@@ -5,7 +5,8 @@ const zhTW: Dictionary = {
     brand: "BloomPath",
     privacyPolicy: "隱私政策",
     termsOfService: "服務條款",
-    copyright: "Quakr",
+    copyright: "力芽工作室",
+    businessInfo: "營業人名稱：聖安卓商行（力芽工作室）　統一編號：99867736　地址：408 台中市南屯區大墩七街493號",
     supportEmail: "客服信箱：bloompath@quakr.dev",
   },
   home: {
@@ -295,12 +296,12 @@ const zhTW: Dictionary = {
   },
   privacy: {
     title: "隱私政策",
-    lastUpdated: "最後更新：2026 年 2 月 28 日",
+    lastUpdated: "最後更新：2026 年 11 月 25 日",
     sections: [
       {
         title: "1. 簡介",
         content:
-          "BloomPath（以下稱「我們」或「本 App」）由 Quakr 開發與營運。本隱私政策說明我們在您使用 BloomPath 行動應用程式時，如何收集、使用及保護您的資訊。",
+          "BloomPath（以下稱「我們」或「本 App」）由力芽工作室（聖安卓商行，統一編號 99867736，地址：408 台中市南屯區大墩七街493號）開發與營運，並依《個人資料保護法》處理您的個人資料。本隱私政策說明我們在您使用 BloomPath 行動應用程式時，如何收集、使用及保護您的資訊。",
       },
       {
         title: "2. 我們收集的資訊",
@@ -360,7 +361,7 @@ const zhTW: Dictionary = {
   },
   terms: {
     title: "服務條款",
-    lastUpdated: "最後更新：2026 年 3 月 3 日",
+    lastUpdated: "最後更新：2026 年 11 月 25 日",
     sections: [
       {
         title: "1. 條款接受",
@@ -370,7 +371,7 @@ const zhTW: Dictionary = {
       {
         title: "2. 服務說明",
         content:
-          "BloomPath 是一款 AI 育兒夥伴，幫助家長追蹤孩子的發展里程碑。本 App 提供技能追蹤、AI 導師、每日任務建議和每週成長報告，基於蒙特梭利與正向教養方法論。",
+          "BloomPath 由力芽工作室（聖安卓商行，統一編號 99867736）開發與營運。BloomPath 是一款 AI 育兒夥伴，幫助家長追蹤孩子的發展里程碑。本 App 提供技能追蹤、AI 導師、每日任務建議和每週成長報告，基於蒙特梭利與正向教養方法論。",
       },
       {
         title: "3. 帳號註冊",
@@ -415,7 +416,7 @@ const zhTW: Dictionary = {
       {
         title: "9. 智慧財產權",
         content:
-          "BloomPath 中的所有內容、設計和技術均為 Quakr 所有。未經事先書面同意，您不得複製、修改或散佈本 App 的任何部分。",
+          "BloomPath 中的所有內容、設計和技術均為力芽工作室（聖安卓商行）所有。未經事先書面同意，您不得複製、修改或散佈本 App 的任何部分。",
       },
       {
         title: "10. 責任限制",

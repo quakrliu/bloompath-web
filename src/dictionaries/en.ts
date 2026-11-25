@@ -5,7 +5,8 @@ const en: Dictionary = {
     brand: "BloomPath",
     privacyPolicy: "Privacy Policy",
     termsOfService: "Terms of Service",
-    copyright: "Quakr",
+    copyright: "Leah Studio",
+    businessInfo: "Operated by Leah Studio (聖安卓商行, Taiwan Business ID 99867736) · No. 493, Dadun 7th St., Nantun Dist., Taichung 408, Taiwan",
     supportEmail: "Support: bloompath@quakr.dev",
   },
   home: {
@@ -295,12 +296,12 @@ const en: Dictionary = {
   },
   privacy: {
     title: "Privacy Policy",
-    lastUpdated: "Last updated: February 28, 2026",
+    lastUpdated: "Last updated: November 25, 2026",
     sections: [
       {
         title: "1. Introduction",
         content:
-          'BloomPath ("we", "our", or "the App") is developed and operated by Quakr. This Privacy Policy explains how we collect, use, and protect your information when you use the BloomPath mobile application.',
+          'BloomPath ("we", "our", or "the App") is developed and operated by Leah Studio (聖安卓商行, Taiwan Business ID 99867736), No. 493, Dadun 7th St., Nantun Dist., Taichung 408, Taiwan. This Privacy Policy explains how we collect, use, and protect your information when you use the BloomPath mobile application.',
       },
       {
         title: "2. Information We Collect",
@@ -361,7 +362,7 @@ const en: Dictionary = {
   },
   terms: {
     title: "Terms of Service",
-    lastUpdated: "Last updated: March 3, 2026",
+    lastUpdated: "Last updated: November 25, 2026",
     sections: [
       {
         title: "1. Acceptance of Terms",
@@ -371,7 +372,7 @@ const en: Dictionary = {
       {
         title: "2. Description of Service",
         content:
-          "BloomPath is an AI-powered parenting companion that helps parents track their children's developmental milestones. The App provides skill tracking, AI mentoring, daily task suggestions, and weekly growth reports based on Montessori and positive parenting methodologies.",
+          "BloomPath is developed and operated by Leah Studio (聖安卓商行, Taiwan Business ID 99867736). BloomPath is an AI-powered parenting companion that helps parents track their children's developmental milestones. The App provides skill tracking, AI mentoring, daily task suggestions, and weekly growth reports based on Montessori and positive parenting methodologies.",
       },
       {
         title: "3. Account Registration",
@@ -416,7 +417,7 @@ const en: Dictionary = {
       {
         title: "9. Intellectual Property",
         content:
-          "All content, design, and technology in BloomPath are owned by Quakr. You may not copy, modify, or distribute any part of the App without prior written consent.",
+          "All content, design, and technology in BloomPath are owned by Leah Studio (聖安卓商行). You may not copy, modify, or distribute any part of the App without prior written consent.",
       },
       {
         title: "10. Limitation of Liability",

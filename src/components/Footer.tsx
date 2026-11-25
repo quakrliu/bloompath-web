@@ -28,6 +28,7 @@ export function Footer() {
           {t.common.supportEmail}
         </a>
       </div>
+      <p className="max-w-4xl mx-auto px-6 mt-3 text-xs">{t.common.businessInfo}</p>
     </footer>
   );
 }

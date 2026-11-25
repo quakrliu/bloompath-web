@@ -10,6 +10,7 @@ export interface Dictionary {
     privacyPolicy: string;
     termsOfService: string;
     copyright: string;
+    businessInfo: string;
     supportEmail: string;
   };
   home: {
